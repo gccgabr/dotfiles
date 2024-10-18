@@ -20,16 +20,7 @@
 	networking.networkmanager.enable = true;
 	time.timeZone = "America/Santarem";
 	i18n.defaultLocale = "pt_BR.UTF-8";
-	services.printing.enable = true;
-	sound.enable = true;
 	security.rtkit.enable = true;
-	services.pipewire = {
-		enable = true;
-		alsa.enable = true;
-		alsa.support32Bit = true;
-		pulse.enable = true;
-		jack.enable = true;
-	};
 
 	users.users.gabriel = {
 	      	isNormalUser = true;
@@ -40,7 +31,7 @@
 	};
 
 	environment.systemPackages = with pkgs; [
-	  vim
+		vim
 		R
 		rustup
 		julia
@@ -50,21 +41,48 @@
 		cinnamon.nemo	
 		libreoffice
 		pavucontrol
-		bluez
-	  wget
-		libnotify
+		wget
 		rofi-wayland
-		chromium	
+		firefox
 		wl-clipboard
 		foot
 		brightnessctl
 		git
 		sway
+		gh
+		nodejs
+		openjdk
+		nginx
+		apache-httpd
+		vimiv-qt
+		grim
+		slurp
+		waylock
+		iperf
+		wireshark
+		nmap
+		thc-hydra
+		sqlmap
+		tor
+		clipman
+		way-displays
 	];
 
 	fonts.packages = with pkgs; [
 		noto-fonts
 	];
+
+	hardware.bluetooth.enable = true;
+	hardware.bluetooth.powerOnBoot = true;
+	hardware.bluetooth.settings = {
+		General = {
+			Experimental = true;
+		};
+	};
+	hardware.pulseaudio = {
+		enable = true;
+		package = pkgs.pulseaudioFull;
+	};
 
 	services.openssh.enable = true;
 	services.greetd = {                                                      
@@ -76,6 +94,8 @@
 			};                                                                   
 		};                                                                     
 	};
+	services.blueman.enable = true;
+	services.printing.enable = true;
 
 	system.stateVersion = "24.05";
 }
