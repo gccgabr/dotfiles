@@ -3,9 +3,7 @@ require "paq" {
 
 	"nvim-lualine/lualine.nvim";
 	"voldikss/vim-floaterm";
-	"nvim-lua/plenary.nvim";
-	"nvim-telescope/telescope.nvim";
-	"shaunsingh/solarized.nvim";
+	"ellisonleao/gruvbox.nvim";
 }
 
 require("lualine").setup()
