@@ -4,6 +4,8 @@ require "paq" {
 	"nvim-lualine/lualine.nvim";
 	"voldikss/vim-floaterm";
 	"ellisonleao/gruvbox.nvim";
+	"atelierbram/Base4Tone-nvim";
+	"atelierbram/Base2Tone-nvim";
 }
 
 require("lualine").setup()

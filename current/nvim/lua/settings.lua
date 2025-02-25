@@ -5,7 +5,7 @@ vim.opt.shiftwidth = 4
 vim.opt.background = "light"
 --vim.g.gruvbox_contrast_light = 'hard'
 vim.cmd [[
-	colorscheme gruvbox
+	colorscheme base2tone_garden_light
 	if has("autocmd")
 		augroup templates
 			autocmd BufNewFile *.sh 0r ~/.config/nvim/templates/skeleton.sh
